@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  each m in messages
+    p= m.user + ': ' + m.text + ', ' + m.added
+  br
+  br
+  a(href="/new") Submit a Message
